@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Chromechat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Websocket client</h1>
+      <div id="status"></div>
+    </div>
+    <div id="navigation">
+      <p id="connecting">
+      <input type='text' id="server" value="ws://localhost:8080/websocket"></input>
+      <button id='toggleConnection' type="button">connection</button>
+      </p>
+      <div id="connected">
+        <p>
+        <input type='text' id="send_txt" value=></input>
+        <button id="send" type="button">send</button>
+        </p>
+      </div>
+      <div id="content"
+        <button id="clear">Clear text</button>
+        <div id="output"></div>
+      </div>
+    </div>
+  </body>
+</html>
