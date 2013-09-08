@@ -1,3 +1,4 @@
+'use strict';
 var websocket;
 $(document).ready(init);
 
@@ -17,8 +18,8 @@ function init() {
 };
 
 function connect() {
-  wsHost = $("#server").val()
-    websocket = new WebSocket(wsHost);
+  var wsHost = $("#server").val();
+  websocket = new WebSocket(wsHost);
   showScreen('<b>Connecting to: ' +  wsHost + '</b>');
   websocket.onopen = function(evt) { onOpen(evt) };
   websocket.onclose = function(evt) { onClose(evt) };
@@ -40,7 +41,7 @@ function toggleConnection() {
 
 function sendTxt() {
   if(websocket.readyState == websocket.OPEN){
-    txt = $("#send_txt").val();
+    var txt = $("#send_txt").val();
     websocket.send(txt);
     showScreen('sending: ' + txt);
   } else {
