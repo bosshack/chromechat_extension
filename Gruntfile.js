@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 tasks: ['coffee:test']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server']
             }
         },
@@ -112,16 +112,17 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
+                sassDir: '<%= yeoman.app %>/sass',
+                cssDir: '<%= yeoman.app %>/styles',
+                //generatedImagesDir: '.tmp/images/generated',
+                //imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
                 importPath: '<%= yeoman.app %>/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                relativeAssets: false
+                //httpImagesPath: '/images',
+                //httpGeneratedImagesPath: '/images/generated',
+                relativeAssets: false,
+                config: 'config.rb'
             },
             dist: {},
             server: {

@@ -63,6 +63,11 @@ function onMessage(evt) {
   showScreen('<span style="color: blue;">RESPONSE: ' + evt.data+ '</span>');
 };
 
+function onError(evt) {
+  console.log(evt);
+  showScreen('<span style="color: red;">Error</span>');
+};
+
 function showScreen(txt) {
   $('#output').prepend('<p>' + txt + '</p>');
 };
