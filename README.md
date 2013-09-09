@@ -11,5 +11,15 @@ generator-chrome-extension and generator-angular.
 
 ```bash
 npm install
+bower install
 ```
 
+### Run watchers to compile sass, etc...
+
+```bash
+grunt watch
+```
+
+### Finally, add the 'app' directory as an extension in chrome...
+
+I'll put instructions here if needed, later.

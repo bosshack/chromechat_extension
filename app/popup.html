@@ -1,36 +1,23 @@
 <!doctype html>
-<html class="no-js" xmlns:ng="http://angularjs.org" id="ng-app" data-ng-app="gumshoeApp">
+<html class="no-js" xmlns:ng="http://angularjs.org" id="ng-app" data-ng-app="chromechatApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Chromechat</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <link href="styles/main.css" rel="stylesheet">
-    <!-- build:js scripts/popup.js -->
-    <script src="scripts/popup.js"></script>
-    <!-- endbuild -->
   </head>
 
   <body>
-    <div id="header">
-      <h1>Websocket client</h1>
-      <div id="status"></div>
-    </div>
-    <div id="navigation">
-      <p id="connecting">
-      <input type='text' id="server" value="ws://localhost:8080/websocket"></input>
-      <button id='toggleConnection' type="button">connection</button>
-      </p>
-      <div id="connected">
-        <p>
-        <input type='text' id="send_txt" value=></input>
-        <button id="send" type="button">send</button>
-        </p>
-      </div>
-      <div id="content"
-        <button id="clear">Clear text</button>
-        <div id="output"></div>
-      </div>
-    </div>
+    <div class="l-container" ng-view=""></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/directives.js"></script>
+    <script src="scripts/directives/message_box.js"></script>
+    <script src="scripts/directives/messages.js"></script>
+    <script src="scripts/directives/user_list.js"></script>
+    <script src="scripts/controllers/chat.js"></script>
   </body>
 </html>

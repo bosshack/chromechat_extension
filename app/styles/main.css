@@ -5923,9 +5923,21 @@ table.hide-for-medium {
     margin: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jadams\/html\/chromechat_extension\/app\/sass\/_app\.scss}line{font-family:\000031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jadams\/html\/chromechat_extension\/app\/sass\/_layout\.scss}line{font-family:\000031}}
 body {
-  background: yellow;
+  min-width: 770px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jadams\/html\/chromechat_extension\/app\/sass\/components\/_user_list\.scss}line{font-family:\000032}}
+user-list ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/jadams\/html\/chromechat_extension\/app\/sass\/components\/_messages\.scss}line{font-family:\000031}}
+messages {
+  display: block;
+  min-height: 400px;
 }
 
 /*@ sourceMappingURL=main.css.map */
