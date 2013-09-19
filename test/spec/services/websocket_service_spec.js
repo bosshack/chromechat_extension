@@ -22,7 +22,7 @@ describe('$websocketService', function () {
   it('broadcasts message on the injected scope when onmessage(MessageEvent)', function () {
     spyOn(mockScope, '$broadcast');
     // MessageEvent just needs a data property, so this acts like it.
-    subject.onmessage({ data: 'foo' });
-    expect(mockScope.$broadcast).toHaveBeenCalledWith('inboundMessage', 'foo');
+    subject.onmessage({ data: '{ "some": "json" }' });
+    expect(mockScope.$broadcast).toHaveBeenCalledWith('inboundMessage', { some: 'json' });
   });
 });

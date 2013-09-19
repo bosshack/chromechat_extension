@@ -7,7 +7,7 @@ angular.module('chromechatApp.Services')
     return function(scope) {
       return {
         onmessage: function(message){
-          scope.$broadcast(topicName, message.data);
+          scope.$broadcast(topicName, angular.fromJson(message.data));
         }
       };
     };
