@@ -7,7 +7,7 @@ describe('$websocketService', function () {
   beforeEach(function(){
     module('chromechatApp.Services');
     mockScope = {
-      broadcast: function(){}
+      $broadcast: function(){}
     };
 
     inject(function($websocketService) {
@@ -20,9 +20,9 @@ describe('$websocketService', function () {
   });
 
   it('broadcasts message on the injected scope when onmessage(MessageEvent)', function () {
-    spyOn(mockScope, 'broadcast');
+    spyOn(mockScope, '$broadcast');
     // MessageEvent just needs a data property, so this acts like it.
     subject.onmessage({ data: 'foo' });
-    expect(mockScope.broadcast).toHaveBeenCalledWith('foo');
+    expect(mockScope.$broadcast).toHaveBeenCalledWith('foo');
   });
 });
