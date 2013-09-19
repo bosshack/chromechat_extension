@@ -2,7 +2,7 @@ var shared = function(config) {
   config.set({
     basePath: '',
     exclude: [],
-    port: 8080,
+    port: 8081,
     runnerPort: 9100,
     colors: true,
     autoWatch: true,
@@ -45,7 +45,6 @@ shared.files = [
   'app/bower_components/underscore/underscore.js',
   'app/bower_components/angular/angular.js',
   'app/bower_components/angular-sanitize/angular-sanitize.js',
-  //'app/bower_components/angular-resource/angular-resource.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
   'app/scripts/vendor/foundation/foundation.js',
   'app/scripts/*.js',

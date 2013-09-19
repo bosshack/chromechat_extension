@@ -23,3 +23,12 @@ grunt watch
 ### Finally, add the 'app' directory as an extension in chrome...
 
 I'll put instructions here if needed, later.
+
+### To run the tests:
+
+```bash
+karma start
+```
+
+You can also just hit <leader>t in vim to run them, as long as there's a karma
+session running in the background.

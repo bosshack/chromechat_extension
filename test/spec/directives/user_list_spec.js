@@ -6,6 +6,7 @@ describe('UserList', function () {
 
   beforeEach(function(){
     module('chromechatApp.Directives', 'templates');
+
     inject(function($compile, $rootScope) {
       el = angular.element("<user-list></user-list>");
       scope = $rootScope;
@@ -15,6 +16,6 @@ describe('UserList', function () {
   });
 
   it('has a user in it', function () {
-    expect(angular.element('ul li', el)[0].innerText).toContain('knewter');
+    expect(angular.element('ul li', el)[0].innerText).toEqual('knewter');
   });
 });
