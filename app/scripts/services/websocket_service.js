@@ -2,10 +2,12 @@
 
 angular.module('chromechatApp.Services')
   .factory('$websocketService', [function() {
+    var topicName = 'inboundMessage';
+
     return function(scope) {
       return {
         onmessage: function(message){
-          scope.$broadcast(message.data);
+          scope.$broadcast(topicName, message.data);
         }
       };
     };

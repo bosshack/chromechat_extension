@@ -23,6 +23,6 @@ describe('$websocketService', function () {
     spyOn(mockScope, '$broadcast');
     // MessageEvent just needs a data property, so this acts like it.
     subject.onmessage({ data: 'foo' });
-    expect(mockScope.$broadcast).toHaveBeenCalledWith('foo');
+    expect(mockScope.$broadcast).toHaveBeenCalledWith('inboundMessage', 'foo');
   });
 });
