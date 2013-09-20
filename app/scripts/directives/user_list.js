@@ -5,7 +5,9 @@ angular.module('chromechatApp.Directives')
     return {
       restrict: 'E',
       templateUrl: 'templates/user_list.html',
-      scope: {},
+      scope: {
+        users: '='
+      },
       link: function($scope, element, attrs) {
       }
     };

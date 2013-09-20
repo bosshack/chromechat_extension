@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('chromechatApp.Directives')
-  .directive('messages', [function(){
+  .directive('message', [function(){
     return {
       restrict: 'E',
-      templateUrl: 'templates/messages.html',
+      templateUrl: 'templates/message.html',
       scope: {
-        messages: '='
+        message: '='
       },
       link: function($scope, element, attrs) {
       }

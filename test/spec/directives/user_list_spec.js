@@ -8,8 +8,12 @@ describe('UserList', function () {
     module('chromechatApp.Directives', 'templates');
 
     inject(function($compile, $rootScope) {
-      el = angular.element("<user-list></user-list>");
+      el = angular.element("<user-list users='users'></user-list>");
       scope = $rootScope;
+      scope.users = [
+        { username: 'knewter' },
+        { username: 'nrstott' }
+      ];
       $compile(el)(scope);
       scope.$digest();
     });
@@ -17,5 +21,6 @@ describe('UserList', function () {
 
   it('has a user in it', function () {
     expect(angular.element('ul li', el)[0].innerText).toEqual('knewter');
+    expect(angular.element('ul li', el)[1].innerText).toEqual('nrstott');
   });
 });
