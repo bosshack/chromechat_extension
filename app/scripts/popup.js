@@ -3,7 +3,8 @@
 angular.module('chromechatApp',
   [
     'chromechatApp.Controllers',
-    'chromechatApp.Directives'
+    'chromechatApp.Directives',
+    'chromechatApp.Services'
   ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
@@ -11,5 +12,4 @@ angular.module('chromechatApp',
       controller: 'ChatController'
     });
   }])
-  // .value('environment', 'test')
-  .value('foo', 'bar');
+  .value('websocketUrl', 'ws://localhost:3030/websocket');

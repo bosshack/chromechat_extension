@@ -4,11 +4,12 @@ angular.module('chromechatApp.Services')
   .factory('$websocketService', [function() {
     var topicName = 'inboundMessage';
 
-    return function(scope) {
-      return {
-        onmessage: function(message){
+    return {
+      start: function(scope, websocketUrl) {
+        var socket = new WebSocket(websocketUrl);
+        socket.onmessage = function(message){
           scope.$broadcast(topicName, angular.fromJson(message.data));
-        }
-      };
+        };
+      }
     };
   }]);
